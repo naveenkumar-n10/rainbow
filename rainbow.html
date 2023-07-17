@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px; 
+        }
+        button{
+            cursor: pointer;
+            background-color: antiquewhite;
+            background-image: linear-gradient(rgb(43, 142, 145),gray);
+        }
+        
+    </style>
+</head>
+<body>
+    <button>Click Me!...</button>
+    <script>
+        const btn=document.querySelector('button');
+        const body=document.querySelector('body');
+        const color=['red','orange','yellow','green','blue','indigo','violet','light blue'];
+
+
+        body.style.backgroundColor='white';
+        document.addEventListener('click',function(){
+            const colorIndex=parseInt(Math.random()*color.length);
+            body.style.backgroundColor=color[colorIndex];
+        });
+    </script>
+</body>
+</html
